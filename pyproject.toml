@@ -1,15 +1,12 @@
 [tool.poetry]
-name = "python-template"
+name = "buggy-module"
 version = "0.1.0"
-description = "Python template with opinionated setup of my personal preferences."
+description = "Demonstrate linter errors"
 authors = ["Benedikt Fuchs <benedikt.fuchs.staw@hotmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "python_template" }]
-repository = "https://github.com/helpmefindaname/python-template"
-
-[tool.poetry.scripts]
-python_template = "python_template.cli:main"
+packages = [{ include = "buggy_module" }]
+repository = "https://github.com/helpmefindaname/test_pytest_github_actions_annotate"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -19,8 +16,11 @@ pytest = "^7.2.0"
 pytest-mypy = "^0.10.3"
 black = "^22.12.0"
 ruff = "^0.0.205"
-pytest-github-actions-annotate-failures = "^0.1.8"
+pytest-github-actions-annotate-failures = {git="https://github.com/helpmefindaname/pytest-github-actions-annotate-failures.git", branch="add_multiline_error_strings"}
 pytest-xdist = "^3.1.0"
+flake8 = "<5.0.0"
+pytest-flake8 = "^1.1.1"
+pytest-ruff = "0.0.5"
 
 [build-system]
 requires = ["poetry-core"]

@@ -15,7 +15,7 @@ python = "^3.7"
 pytest = "^7.2.0"
 pytest-mypy = "^0.10.3"
 black = "^22.12.0"
-ruff = "^0.0.205"
+ruff = "*"
 pytest-github-actions-annotate-failures = {git="https://github.com/helpmefindaname/pytest-github-actions-annotate-failures.git", branch="add_multiline_error_strings"}
 pytest-xdist = "^3.1.0"
 flake8 = "<5.0.0"
